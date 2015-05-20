@@ -9,4 +9,4 @@
 override_dh_fixperms:
 	dh_fixperms
 	find debian/*/usr/share/yasnippet-snippets -type f -executable -print0 \
-	 | xargs -0 chmod --verbose -x
+	 | xargs -0 --no-run-if-empty chmod --verbose -x
